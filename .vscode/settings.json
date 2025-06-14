@@ -1,0 +1,8 @@
+{
+    // point Ruff & Black to Poetry env
+    "python.formatting.provider": "black",
+    "python.linting.ruffEnabled": true,
+    "python.testing.pytestEnabled": true,
+    "python.testing.autoTestDiscoverOnSaveEnabled": true
+  }
+  
