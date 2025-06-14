@@ -1,0 +1,19 @@
+repos:
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.4.0
+  hooks: [ {id: ruff, args: [--fix]} ]
+- repo: https://github.com/psf/black
+  rev: 24.4.0
+  hooks: [ {id: black} ]
+- repo: https://github.com/pre-commit/mirrors-mypy
+  rev: v1.10.0
+  hooks: [ {id: mypy} ]
+- repo: local
+  hooks:
+  - id: pytest
+    name: pytest fast suite
+    entry: poetry run pytest -q
+    language: system
+    pass_filenames: false   # <── add this line
+    always_run: true        # (optional) run even if no Python files changed
+
