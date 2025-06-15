@@ -1,29 +1,26 @@
-[project]
-name = "dreamerv3-jax"
+# pyproject.toml
+[tool.poetry]
+name = "dreamerv3-jax"                  
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "Your Name",email = "you@example.com"}
-]
-readme = "README.md"
-requires-python = ">=3.13"
-dependencies = [
-    "jax (>=0.6.1,<0.7.0)",
-    "jaxlib (>=0.6.1,<0.7.0)",
-    "flax (>=0.10.6,<0.11.0)",
-    "optax (>=0.2.5,<0.3.0)",
-    "chex (>=0.1.89,<0.2.0)",
-    "rlax (>=0.1.7,<0.2.0)",
-    "distrax (>=0.1.5,<0.2.0)",
-    "gymnasium[atari] (>=1.1.1,<2.0.0)",
-    "crafter (>=1.8.3,<2.0.0)",
-    "tensorboardx (>=2.6.4,<3.0.0)"
+authors = ["Your Name <you@example.com>"]
+
+packages = [
+  { include = "dreamer", from = "src" }
 ]
 
-
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+[tool.poetry.dependencies]
+python = ">=3.13,<3.14"
+jax = "^0.6.1"
+jaxlib = "^0.6.1"
+flax = "^0.10.6"
+optax = "^0.2.5"
+chex = "^0.1.89"
+rlax = "^0.1.7"
+distrax = "^0.1.5"
+gymnasium = { version = "^1.1.1", extras = ["atari"] }
+crafter = "^1.8.3"
+tensorboardx = "^2.6.4"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.4.0"
@@ -33,3 +30,6 @@ ruff = "^0.11.13"
 black = "^25.1.0"
 mypy = "^1.16.0"
 
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
