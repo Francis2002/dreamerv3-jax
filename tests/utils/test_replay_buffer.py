@@ -5,7 +5,6 @@
 Run with:  `pytest replay_buffer.py`  (thanks to pytest‑collector running all test_*)
 """
 
-import pytest
 from dreamer.utils.replay_buffer import ReplayBuffer
 import jax
 import jax.numpy as jnp
@@ -64,10 +63,3 @@ def test_sample_shapes_and_dtypes():
     assert batch["discounts"].shape == (8, 4)
     assert batch["dones"].shape == (8, 4)
     assert batch["obs"].dtype == jnp.float32
-
-
-if __name__ == "__main__":
-    import sys
-    import pytest
-
-    sys.exit(pytest.main([__file__]))

@@ -13,10 +13,11 @@ repos:
   - id: pytest
     name: pytest fast suite
     language: system
-    pass_filenames: false   # <── add this line
-    always_run: true        # (optional) run even if no Python files changed
+    pass_filenames: false   
+    always_run: true   
     entry: >
         env
         PYTHONPYCACHEPREFIX=/tmp/pycache
         pytest -q --cache-clear
+    exclude: '(\\.pytest_cache/|__pycache__/|\\.coverage$)'
 
