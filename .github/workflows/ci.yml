@@ -10,7 +10,6 @@ jobs:
       with:
         python-version: '3.13'
     - uses: abatilo/actions-poetry@v3
-      with: { virtualenvs-create: true }
     - uses: actions/cache@v3
       with:
         path: ~/.cache/pypoetry
