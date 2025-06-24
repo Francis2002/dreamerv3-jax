@@ -1,0 +1,4 @@
+# file: /Users/franciscosilva/Documents/Projects/dreamerv3-jax/src/dreamer/utils/replay_buffer.py
+# hypothesis_version: 6.135.9
+
+[255.0, 'actions', 'discounts', 'dones', 'obs', 'rewards']
